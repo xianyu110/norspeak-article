@@ -8,33 +8,33 @@
 
 首页标题直接写着：**Free AIvoice Online — 免费 AI 语音工作台**。给创作者、客服和开发者用：实时通话、转写和朗读，都留在这一页，不用装桌面客户端。
 
-界面支持中文 / EN / 日本語，也能切浅色、深色主题。右上角「工作台」一键进工作室。
+界面支持中文 / EN / 日本語；主题可切**跟随系统 / 浅色 / 深色**。顶栏点「工作台」，页面会滚到首页里的工作室区块（`#studio`），并不是另开一个 `/studio` 路由——别去猜路径，点导航就行。
 
-![NorSpeak 首页 · 浅色主题](https://upload.maynor1024.live/file/1794208362324_home-light.png)
+![NorSpeak 首页 · 浅色主题](https://upload.maynor1024.live/file/1794273846483_home-light.png)
 
-![NorSpeak 首页 · 深色主题](https://upload.maynor1024.live/file/1794208360892_home-dark.png)
+![NorSpeak 首页 · 深色主题](https://upload.maynor1024.live/file/1794273849256_home-dark.png)
 
 ## 功能一：文本转语音（TTS）
 
-进工作室后，默认停在「文本转语音」。贴一段字（单次上限约 8000 字），选音色（例如 Eve 伊芙），点播放就能听到效果；输出格式是 MP3，也可勾选「包含单词时间戳」。
+工作室默认停在「文本转语音」。贴一段字（单次上限约 8000 字），选音色（例如 **Eve 伊芙**），语言可 **Auto detect 自动检测**，输出格式是 **MP3**，点「Play 播放」就能听到效果。
 
-线上工作台用站点内置 Worker 密钥即可试听，浏览器侧不必先填自己的 Key。
+底栏会亮着「已就绪 · Worker 密钥」：线上工作台用站点内置 Worker 密钥即可试听，浏览器侧拿不到这把 Key，也不必先填自己的。
 
-![文本转语音工作台](https://upload.maynor1024.live/file/1794208366036_tts.png)
+![文本转语音工作台](https://upload.maynor1024.live/file/1794273858741_tts.png)
 
 ## 功能二：语音转文字（STT）
 
-切到「语音转文字」：可上传音频，也可填音频网址；单文件最高约 **25 MB**。语言可自动检测，还能开说话人识别、是否保留语气词，以及为专有名词填关键词，方便把录音收成可编辑文本。
+切到「语音转文字」：可 **Upload audio 音频上传**，也可填 **Audio URL 音频网址**；单文件最高约 **25 MB**。语言默认自动检测。
 
-![语音转文字工作台](https://upload.maynor1024.live/file/1794208360952_stt.png)
+进阶选项里能勾：**Format transcript 格式转录**、**Identify different speakers 识别不同的说话者**、**Include filler words 加入填充词**，再给专有名词填 Keywords（人名、品牌、术语），方便把录音收成可编辑文本。
 
-## 功能三：实时通话 + 字幕
+![语音转文字工作台](https://upload.maynor1024.live/file/1794273854512_stt.png)
 
-「实时」页把通话和字幕并排：左边接听（全双工 / 按住说话），右边实时转写；底下还能导出 TXT / JSON / SRT，并把摘要再读出来。
+## 功能三：实时通话
 
-模型默认可用 `grok-voice-latest`，转写侧可见 `grok-voice-transcribe-2.0`；音色可选（例如 ara · 温暖、友好）。未接通时状态会显示「未接通」，点接通并允许麦克风后再开始。
+「Live 实时」页空闲态是一块玻璃球体 UI：状态显示「就绪 · 玻璃球体 · 电平呼吸 · 打断流利」，底下音色默认 **Ara · 温暖**，可调助手模式和语速；点「连接实时语音」后，浏览器才会要麦克风权限。字幕要等接通、开麦之后才会跑起来；模型（如 `grok-voice-latest`）藏在「高级」里，闲逛时先看到的是通话球和底部控制条。
 
-![实时通话与字幕](https://upload.maynor1024.live/file/1794208358819_realtime.png)
+![实时通话工作台](https://upload.maynor1024.live/file/1794273857438_realtime.png)
 
 ## 在线免费，API 付费
 
@@ -53,14 +53,14 @@
 - **创作者**：$12.99（约 30 万单位）
 - **专业**：$29.99（约 75 万单位）
 
-额度大致按：TTS 按字符计；STT 按转写结果字符等计（页面「额度怎么算」有说明）。
+额度大致按：TTS 1 字符 = 1 单位；STT 按转写结果字符计（成功但空结果也计 1；页面「额度怎么算」有说明）。
 
-![定价页：订阅与加油包](https://upload.maynor1024.live/file/1794208366000_pricing.png)
+![定价页：订阅与加油包](https://upload.maynor1024.live/file/1794273860266_pricing.png)
 
 ## 怎么开始
 
 1. 打开 [https://norspeak.com/](https://norspeak.com/)
-2. 点「去工作台」或「工作台」
+2. 点顶栏「工作台」，滚到首页工作室（或点「生成配音」「转写音频」）
 3. 先用 TTS 听一句，再试转写或实时通话
 4. 确认声音和链路 OK 后，再考虑注册订阅、用 API Key 接到自己的程序
 
